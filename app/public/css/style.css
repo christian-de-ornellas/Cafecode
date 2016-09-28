@@ -1,0 +1,277 @@
+/*
+Classes para auxiliar o processo de desenvolvimento das páginas principal do sistema
+*/
+/* 
+    Created on : 18/05/2016, 13:18:15
+    Author     : Christian
+*/
+
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0em;    
+    box-sizing: border-box;
+    moz-box-sizing: border-box;
+    webkit-box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-image: linear-gradient(to bottom, #fff, #eee, #ddd, #fff);  
+    background-repeat: repeat-x;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+
+}
+/*PADRÃO */
+h1{font-size: 2em; font-weight: 700;}
+h2{font-size: 1.8em; font-weight: 700;}
+h3{font-size: 1.6em; font-weight: 400;}
+h3{font-size: 1.4em; font-weight: 400;}
+b{ font-weight: 700;}
+ul{list-style: none;}
+.fontzero{font-size: 0;}
+.left{float: left;}
+.right{float: right;}
+
+a{color: #2c3e50;}
+
+/*BOX*/
+.container{float:left; width: 100%;}
+.content{display: block; margin: 0 auto; padding: 10px 10px; width: 90%; max-width: 1200px;}
+.clear{clear: both;}
+
+/*HEADER*/
+.main_header{
+    background-color: #16a085;
+}
+.main_header small{
+    font-size: 0.8em;
+    color: #fff;
+}
+/*HEADER*/
+.barra-user li{
+    float: right;
+    color: #2c3e50;
+    display: inline-block;
+    margin-right: 2.5em;
+    font-size: 0.8em;
+}
+.barra-user li:hover{
+    color: #fff;  
+    transition:  linear 1s; 
+}
+.bemvindo{float: left;}
+/*NAV*/
+.main_menu{
+    background-color: #fff;  
+    height: 2.500em;
+    text-transform: uppercase;
+}
+.main_menu .content{
+    padding-top: 0;
+}
+.main_menu ul li{
+    background-color: #fff;  
+    float: right;
+    color: #117a65;
+    text-align: center;
+    width: 10.125em;
+    height: 2.500em;
+    line-height: 2.500em;
+    font-weight: 700;    
+}
+.main_menu ul li ul li a{display: block; line-height: 2.500em;font-weight: 700;}
+.main_menu ul li:hover ul li:hover {
+    color: #fff!important;
+    background: #16a085;
+    border:none;
+    font-weight: 700;
+}
+.main_menu ul li:hover{
+    width: 10.125em;
+    color: #fff;
+    background: #2c3e50;  
+    border-bottom: 4px solid #16a085;   
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+}
+.main_menu ul li ul{
+    display: none;
+}
+.main_menu ul li:hover ul{
+    display: block;
+}
+.main_menu ul li ul li{
+    text-align: left;
+    padding-left: 1em;
+}
+.main_menu .logo img{
+    float: left;
+    color: #1abc9c;
+    padding-top: 0.4em; 
+}
+/* BOXES */
+.box25{
+    width: 25%;
+    float: left;
+    padding: 1em;      
+}
+.box25 .f-big{
+    font-size: 72px;
+    color: #AB1A25;
+}
+.box30{
+    width: 33.3%;
+    float: left;
+    padding: 1em;
+}
+.box50{
+    width: 50%!important; 
+    float: left;
+    padding: 1em;
+}
+.box70{
+    width: 70%;
+    float: left;
+    padding: 1em;
+}
+.box100{
+    width: 100%;
+    float: left;
+    padding: 1em;
+}
+/*PANEL*/
+.panel{
+    background-color: #fff;
+    margin-top: 1em;
+}
+.panel header{
+    border-bottom: 4px solid #666;
+    background: #eee;
+    color: #666;
+    text-transform: uppercase;
+    padding: 0.4em;
+    font-weight: 700!important;    
+}
+.panel label{
+    padding: 0.2em;
+    width: 100%;
+    display: inline-block;
+}
+.panel span{
+    font-size: 0.6em;
+    color: #aaa;
+    padding: 0.4em;
+    text-transform: uppercase;    
+}
+.panel .form_input{
+    background-image: linear-gradient(to bottom, #eee, #fff, #fff, #fff);
+    border: none;
+    border: #ddd 2px solid;
+    padding: 0.4em;
+    width: 100%;
+    color: #333;
+    font-size: 1em; border-radius: 5px;
+}
+.panel .form_input:focus{outline: 0;}
+.panel .form_input:hover{
+    transition:  all linear 3s;
+    border: #222 2px solid;
+}
+/*PANEL BOX*/
+.panel .box25{
+    margin-right: 1em;
+    background-color: #eee;
+    margin-top: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #117a65;
+    width: 23%!important;
+}
+.panel .box25 a{
+    text-decoration: none;
+    color: #117a65;
+
+}
+.panel .box25 a:hover{
+    text-decoration: none;
+    color: #AB1A25;
+    transition:  all linear 2s;
+}
+.panel .box25:hover{
+    box-shadow: 2px 2px 2px 2px #555;
+    transition:  all linear 1s;
+}
+/*TABELAS PANEL*/
+.panel table{        
+    width: 100%;    
+}
+.panel tr th{   
+    border: none;
+    background-color: #117a65;   
+    color: #fff!important;
+    text-transform: uppercase;
+    padding: 0.4em 0;    
+}
+.panel tr td{ 
+    padding: 0.2em 0;
+    text-transform: uppercase;
+    color: #333; 
+    border-bottom: 1px solid #ccc;
+    font-size: 0.8em;
+}
+.panel tr td:hover{         
+    color: #333;
+    background: #f2f2f2;
+    transition:  all linear 0.2s;
+    cursor: pointer;    
+}
+.panel tr img{padding: 0.2em;}
+.panel a{ color: #117a65; }
+.panel a:hover{ color: #AB1A25; transition: all linear 1s; cursor:pointer;}
+/*PANEL FIGURE*/
+.panel figure img{
+    max-width: 100%;
+    min-width: 100%;    
+    min-height: 160px;
+    max-height: 160px;
+}
+.acoes button{
+    background-color: #16a085;
+    padding: 0.5em 1em; 
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+.acoes button:hover{
+    background-color: #067B58;
+    transition:  all linear 0.5s;
+    cursor: pointer;
+}
+.acoes a{
+    background-color: #117a65;
+    padding: 0.5em 1em; 
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    margin-right: 1em;
+    margin-top: 1em;
+    text-decoration: none;
+}
+.acoes a:hover{
+    background-color: #067B58;
+    color: #fff;
+    transition:  all linear 0.5s;
+    cursor: pointer;
+}
+
+.main_footer{
+    bottom:0;
+    float: left; 
+}
