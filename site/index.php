@@ -2,28 +2,67 @@
 <?php require_once('controller/Config.inc.php'); ?>  
 <?php require_once('../app/model/Artigos.php'); ?>  
 <?php require_once('../app/model/Categorias.php'); ?>
-<?php require_once('../app/model/Configuracao.php'); ?>  
+<?php require_once('../app/model/Configuracao.php'); ?>
+<?php require_once('url.php') ?>
+<?php include_once $pasta.'/'.$pagina.'.php'; ?>
+
+<!-- TOPO DA INDEX COM APRESENTAÇÃO DE CONTEÚDO -->
+<section class="container bg-dark-blue">
+    <?php foreach ($Configuracao->Ultimo() as $key => $resultado): ?>
+        <h1 title="<?= $resultado->keyword; ?>" class="fontzero"><?= $resultado->keyword; ?></h1>
+    <?php endforeach; ?>
+    <div class="content">
+        <!-- ASSUNTO PRINCIPAL -->
+        <header class="tag-posicao">
+            <hgroup>
+                <h1 title="Impulsione os seus">Impulsione os seus</h1>
+                <h2 title="resultados na internet!"> resultados na internet!</h2>
+            </hgroup>
+            <h4 title="">Junte-se a milhares de leitores inteligentes e receba<br />atualizações, artigos e dicas impertíveis para<br />impulsionar os seus resultados na internet (é grátis)!<br/><i class="fa fa-arrow-down" aria-hidden="true"></i></h4>
+        </header>       
+        <div class="clear"></div>  
+    </div>                          
+</section>
+<section class="container bg-blue">
+    <div class="content">
+        <!-- CAPTURA DE E-MAIL PARA LISTA -->
+        <header class="quero-receber">                
+            <form method="post">
+                <label>
+                    <p>Respeitamos sua privacidade, <b>NUNCA</b> enviamos spam!</p>&nbsp; 
+                    <input type="email" placeholder="Seu melhor e-mail..." /> &nbsp; <button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i> Quero receber</button>
+                </label>
+            </form>
+        </header>                       
+        <div class="clear"></div>  
+    </div>                          
+</section>
+<section class="container bg-linha">
+    <div class="content">                           
+        <div class="clear"></div>  
+    </div>                          
+</section>
 <article class="container gradiente">
     <div class="content">
         <header class="post-principal">
             <?php foreach ($Artigo->PostPrincipal() as $key => $ultimo): ?>
                 <figure><img alt="<?= $ultimo->titulo; ?>" src="../app/public/uploads/<?= $ultimo->imagem; ?>"/></figure>
                 <h3 title="<?= $ultimo->titulo; ?>"><?= $ultimo->titulo; ?></h3>                
-                <?= "<a title='Ler mais' href='artigo.php?acao=editar&id=" . $ultimo->id . "'><button class='btn-submit'>Ler mais <i class='fa fa-chevron-circle-right' aria-hidden='true'></i></button></a>"; ?>
+                <?= "<a title='Ler mais' href='artigo.php?acao=ver&id=" . $ultimo->id . "'><button class='btn-submit'>Ler mais <i class='fa fa-chevron-circle-right' aria-hidden='true'></i></button></a>"; ?>
             <?php endforeach; ?>
         </header>
         <div class="post-ultimos">
             <?php foreach ($Artigo->PostSegundo() as $key => $segundo): ?>
                 <figure><img alt="<?= $segundo->titulo; ?>" src="../app/public/uploads/<?= $segundo->imagem; ?>"/></figure>
                 <h4 title="<?= $segundo->titulo; ?>"><?= $segundo->titulo; ?></h4>                
-                <?= "<a title='Ler mais' href='artigo.php?acao=editar&id=" . $segundo->id . "'><button class='btn-submit'>Ler mais <i class='fa fa-chevron-circle-right' aria-hidden='true'></i></button></a>"; ?>
+                <?= "<a title='Ler mais' href='artigo.php?acao=ver&id=" . $segundo->id . "'><button class='btn-submit'>Ler mais <i class='fa fa-chevron-circle-right' aria-hidden='true'></i></button></a>"; ?>
             <?php endforeach; ?>
         </div>
         <div class="post-ultimos-2">
             <?php foreach ($Artigo->PostTerceira() as $key => $terceiro): ?>
                 <figure><img alt="<?= $terceiro->titulo; ?>" src="../app/public/uploads/<?= $terceiro->imagem; ?>"/></figure>
                 <h4 title="<?= $terceiro->titulo; ?>"><?= $terceiro->titulo; ?></h4>                
-                <?= "<a title='Ler mais' href='artigo.php?acao=editar&id=" . $terceiro->id . "'><button class='btn-submit'>Ler mais <i class='fa fa-chevron-circle-right' aria-hidden='true'></i></button></a>"; ?>
+                <?= "<a title='Ler mais' href='artigo.php?acao=ver&id=" . $terceiro->id . "'><button class='btn-submit'>Ler mais <i class='fa fa-chevron-circle-right' aria-hidden='true'></i></button></a>"; ?>
             <?php endforeach; ?>
         </div>
         <div class="clear"></div>
@@ -55,8 +94,8 @@
                     <figure><img  alt="<?= $outros->titulo; ?>" src="../app/public/uploads/<?= $outros->imagem; ?>"/></figure>
                 </header>
                 <footer>
-                    <h4 title=""><?= $outros->titulo; ?></h4>
-                    <?= "<a title='Ler mais' href='artigo.php?acao=editar&id=" . $outros->id . "'><button class='btn-submit'>Ler mais <i class='fa fa-chevron-circle-right' aria-hidden='true'></i></button></a>"; ?>
+                    <h4 title="<?= $outros->titulo; ?>"><?= $outros->titulo; ?></h4>
+                    <?= "<a title='Clique e leia mais' href='artigo.php?acao=ver&id=" . $outros->id . "'><button class='btn-ler'>Ler mais...</button></a>"; ?>
                     <!-- DEFAULT  <a title="" href="#"> <button class='btn-submit'>Ler mais <i class='fa fa-chevron-circle-right' aria-hidden='true'></i></button></a>-->
                 </footer>
             </article>

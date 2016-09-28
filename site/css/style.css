@@ -10,26 +10,24 @@
     moz-box-sizing: border-box;
     webkit-box-sizing: border-box;    
 }
-
+/*CORPO DO SITE*/
 html, body{
     background: #fff;
     font-family: 'Roboto', sans-serif;
-    height: 100%;    
+    height: 100%;
+     
 }
-/*PADRÃO */
-/*400,700,900 */
+/*PADRÃO, 400,700,900*/
 h1{font-size: 2em; font-weight: 900;}
 h2{font-size: 1.8em; font-weight: 700;}
 h3{font-size: 1.6em; font-weight: 400;}
 h4{font-weight: 400;}
-
 b{ font-weight: 700;}
 ul{list-style: none;}
 small{font-size: 0.75em; color:#e05e3d;}
 a{text-decoration: none; color:#7f8c8d;}
 .fontzero{font-size: 0;}
-
-
+.tshadow{text-shadow: 2px 1px #000!important;}
 /*BOX*/
 .container{float:left; width: 100%;}
 .content{display: block; margin: 0 auto; padding: 0.625em; width: 80%; max-width: 1200px;}
@@ -38,130 +36,111 @@ a{text-decoration: none; color:#7f8c8d;}
 .box40{width: 40%;}
 .box30{width: 33%; float: left; padding:1em; }
 .gradiente{ background-image: linear-gradient( to bottom, #ddd, #eee, #fff, #fff);}
-.gradiente-2{ background-image: linear-gradient( to bottom, #fff, #fff, #fff, #94f8c9);}
-
-
-/*COLORS*/
+.gradiente-2{ background-image: linear-gradient( to bottom, #fff, #fff, #fff, #eee);}
+/*BACKGRONDS*/
 .bg-silver{background-color: #ecf0f1; }
 .bg-textura{background-image: url(../images/t.png);background-repeat: repeat;}
 .bg-textura{-moz-background-image: url(../images/t.png);-moz-background-repeat: repeat;}
-
-/*CORES DA SELEÇÃO*/
+.bg-dark-blue{background-color: #0E0B1E;}
+.bg-blue{background-color: #090715;}
+.bg-gray-gradient{background-image: linear-gradient(to top, #999, #888, #777, #666);}
+.bg-linha {background-image: linear-gradient(to left, #3fda05, #efc203, #fc631c, #ec5d37);height: 4px;}
+/*BORDERS*/ 
+.border-bottom{border-bottom: #090715 solid 0.2em;}
+.border-top{border-top: #090915 solid 0.2em;}
+/*PADRÃO DE CORES DA SELEÇÃO*/
 *::selection{color: #e05e3d;}
 *::-moz-selection{color: #e05e3d;}
 *::-webkit-selection{color: #e05e3d;}
-
-.main_header{padding: 1em 0;  border-top:  #00a859 5px solid; text-transform: uppercase;}
+/*HEADER PRINCIPAL*/
+.main_header{padding: 1em 0;  border-top: #00a859 5px solid; text-transform: uppercase;}
+/*MENU DE NAVEGAÇÃO*/
 .links-top{float: right;}
 .links-top li{display: inline-block; padding: 0 0.4em; font-size: 0.9em; }
 .links-top li a:hover{color: #00a859; transition:  all linear 1.5s;}
 .links-top li i{font-size: 1.6em; transition:  all linear 1.5s;}
+/*LOGO DO SITE*/
 .logo img{width: 16%; float: left;}
 .logo img:hover{width: 16%; transition: all linear 1s; cursor:  move;}
-/*MENU PRINCIPAL*/
-.main_menu .content{padding: 0;}
-.main_menu{
+/*TOPO DO SITE COM A DESCRIÇÃO DO CONTEÚDO E CAPTURA DE E-MAIL*/
+.tag-posicao{
+    width: 100%;
+    height: 100%;
     float: left;
-    background-color: #2c3e50; 
-    text-transform: uppercase; 
-    box-shadow: 5px 5px 5px 4px #000;
-    font-weight: 900;
+    padding: 1em 0;
 }
-.main_menu ul li{
-     background-color: #2c3e50;   
+.tag-posicao hgroup{float: left; text-transform: uppercase; color: #ccc;}
+.tag-posicao, h1 h2 {font-size: 0.8em;}
+.tag-posicao h4{float: right; text-align: center; color: #ccc;}
+/*FORMULÁRIO À CAPTURA DE E-MAIL*/
+.quero-receber{
+    width: 100%;
+    height: 100%;
+    float: left;color: #ccc;
+}
+/*TEXTO ALERTANDO A PRIVACIDADE*/
+.quero-receber p{
     float: left;
-    color: #333;
-    text-align: center;
-    width: 11em;
-    height: 2.500em;
-    line-height: 2.500em;
-    font-weight: 700;    
+    color: #ccc;
+    line-height: 30px;
+    font-size: 0.7em;   
 }
-.main_menu ul li a{color: #fff;}
-.main_menu ul li ul li a{display: block; line-height: 2.500em;font-weight: 700;}
-.main_menu ul li:hover ul li:hover {
-    color: #fff!important;
-    background: #34495e; 
-    border:none;
-    font-weight: 700;
+/*FORMULÁRIO*/
+.quero-receber form{
+    float: right;
+    color: #ccc;
 }
-.main_menu ul li:hover{
-    width: 11em;
-    color: #fff;
-    background: #34495e;  
-    border-bottom: 4px solid #00a859;   
-    cursor: pointer;
-    font-weight: 700;
-    position: relative;
-    transition: all linear 0.5s;
-}
-.main_menu ul li ul{
-    display: none;
-}
-.main_menu ul li:hover ul{
-    display: block;
-}
-.main_menu ul li ul li{
-    text-align: left;
-    padding-left: 1em;
-}
-.assinar{float: right; width: 45%;line-height: 2.500em;}
-.assinar input:focus{outline: none;}
+/*BUTÃO DE AÇÃO DO FORMULÁRIO*/
+.quero-receber form button{background-image: linear-gradient(to top, #ec5d37, #ff5100, #fc6c29,#ff5100); border: 2px solid #ae4e37; text-transform: uppercase; color: #fff; border:none; border-radius: 5px; padding: 0.2em;}
+.quero-receber form button:hover{background-image: linear-gradient(to bottom, #ec5d37, #ff5100, #fc6c29,#ff5100); cursor: pointer; transition: all linear 1s;}
+.quero-receber form input{ background-image: linear-gradient(to bottom, #eee, #fff, #fff,#eee); border:none; padding: 0.4em;}
+.quero-receber form input:hover{ background-image: linear-gradient(to top, #fff, #fff, #fff, #eee); border:none; padding: 0.4em;}
+.input:focus{outline: none;}
 button:focus{outline: none;}
 .form_input{background-color: #ddd; border: none; padding: 0.4em; width: 76%; color: #555; border-radius: 10px 0 0 10px;}
 .form_input:hover{transition: all linear 2s; background-color: #fff;}
 .btn-submit{background-color: #00a859; border: none; padding: 0.4em; color: #f2f2f2; text-transform: uppercase; font-weight: 400;}
 .btn-submit:hover{background-color: #065a4b; color:#fff; cursor: pointer;  transition: all linear 1s;}
-
 /* ARTIGO PRINCIPAL */
 .post-principal img:hover{ opacity: 0.80; cursor: pointer;box-shadow: #000 0 0 10px 0;}
-.post-principal img{box-shadow: #000 0 0 7px 0;border-radius:0.6em; float: left; width: 41.625em; max-width: 41.625em; height:23.5em; max-height: 23.5em; margin-right: 1em; margin-top: 1.3em;}
-.post-principal h3{float: left; color: #f2f2f2; margin-top:325px; width: 41.625em; max-width: 41.625em;  position: absolute; padding: 0.4em; width: 666.63px; max-width: 41.625em;text-align: center; text-shadow: #000 0px 0px 10px; text-shadow: #000 0px 0px 10px 10px; font-weight: 800!important;}
-.post-principal button{float: left;  position: absolute; margin-left: -9.250em; margin-top: 2em;}
+.post-principal img{box-shadow: #000 0 0 7px 0;border-radius:0.6em; float: left; width: 41.625em; max-width: 41.625em; height:23.5em; max-height: 23.5em; margin-right: 1em; margin-top: 1em;}
+.post-principal h3{float: left; color: #f2f2f2; margin-top:300px; width: 41.625em; max-width: 41.625em;  position: absolute; padding: 0.4em; width: 666.63px; max-width: 41.625em;text-align: center; text-shadow: #000 0px 0px 10px; text-shadow: #000 0px 0px 10px 10px; font-weight: 800!important;}
+.post-principal button{float: left;  position: relative; margin-left: -9.250em; margin-top: 2em;}
 /* ARTIGO SECUNDÁRIO */
 .post-ultimos img:hover{opacity: 0.80;cursor: pointer;box-shadow: #000 0 0 10px 0;}
-.post-ultimos img{box-shadow: #000 0 0 7px 0;border-radius:0.6em; float: left; width: 20.438em;  height: 11.250em; max-width:20.438em; max-height:11.250em; margin-bottom: 1em; margin-top: 1.3em;}
-.post-ultimos h4{float: left; margin-left: 42.625em; margin-top: 149px; width: 20.438em;  color: #f2f2f2; position: absolute; padding: 0.4em;  text-align: center; text-shadow: #000 0px 0px 10px; text-shadow: #000 0px 0px 10px 10px;font-weight: 800!important;}
-.post-ultimos button{float: left;  position: absolute;   margin-top: 2em; margin-left: -8.000em;}
+.post-ultimos img{box-shadow: #000 0 0 7px 0;border-radius:0.6em; float: left; width: 20.438em;  height: 11.250em; max-width:20.438em; max-height:11.250em; margin-bottom: 1em; margin-top: 1em;}
+.post-ultimos h4{float: left; margin-left: 42.625em; margin-top: 126px; width: 20.438em;  color: #f2f2f2; position: absolute; padding: 0.4em;  text-align: center; text-shadow: #000 0px 0px 10px; text-shadow: #000 0px 0px 10px 10px;font-weight: 800!important;}
+.post-ultimos button{float: left;  position: relative;   margin-top: 2em; margin-left: -8.000em;}
 /* ARTIGO TERCEIRO POST */
 .post-ultimos-2 img:hover{opacity: 0.80;cursor: pointer;box-shadow: #000 0 0 10px 0;}
 .post-ultimos-2 img{box-shadow: #000 0 0 7px 0;border-radius:0.6em; float: left; width: 20.438em; height: 11.250em; max-width:20.438em; max-height:11.250em; margin-bottom: 1em;}
-.post-ultimos-2 h4{float: left; margin-left: 42.625em; margin-top:21.6em; width: 20.438em;  color: #f2f2f2; position: absolute; padding: 0.4em;  text-align: center; text-shadow: #000 0px 0px 10px; text-shadow: #000 0px 0px 10px 10px;font-weight: 800!important;}
-.post-ultimos-2 button{float: left;  position: absolute; margin-top:14.5em; margin-left: -7.875em;}
-
-
-/* SECTION CANAL*/
+.post-ultimos-2 h4{float: left; margin-left: 42.625em; margin-top:20.5em; width: 20.438em;  color: #f2f2f2; position: absolute; padding: 0.4em;  text-align: center; text-shadow: #000 0px 0px 10px; text-shadow: #000 0px 0px 10px 10px;font-weight: 800!important;}
+.post-ultimos-2 button{float: left;  position: relative; margin-top:1em; margin-left: -7.875em;}
+/*CONVITE PARA ASSINAR O CANAL NO YOUTUBE*/
 .canal-youtube{ width: 100%; max-width: 100%;}
 .canal-youtube h3{ color: #333; font-weight: 400; padding: 1em; text-align: center; text-transform: uppercase; margin-bottom: 0.5em;}
-
-/*SECTION POSTS*/
-.outros-posts{box-shadow: #666 0 0 2px 0; padding: 0.6em; background: #fff; width: 24.2%; height: 292px; max-height: 292px; float: left; margin-right: 0.5em; margin-bottom: 0.5em;}
+/*MOSTRA OUTROS ARTIGOS*/
+.outros-posts{padding: 0.6em;  width: 24.2%; max-height: 270px; float: left; margin-right: 0.5em; margin-bottom: 3em;}
 .outros-posts img{width: 100%; height:130px; max-height: 130px; float: left;}
-.outros-posts h4{ text-align: left; color: #555; padding: 0.6em 0 0.6em 0; height: 110px; max-height: 110px; float: left; width: 100%;}
-.outros-posts .btn-submit{ width: 100%; font-weight: 700; float: left;}
-.outros-posts:hover{cursor: pointer;}
-
-
-/*SIDE BAR*/
-.sider-bar{width:100%; background-color: #ccc; }
+.outros-posts h4{ text-align: left; color: #333; padding: 0.6em 0 0.6em 0; height: 85px; max-height: 85px; float: left; width: 100%;}
+.outros-posts .btn-ler{font-weight: 700; float: left; background: transparent; color: #000;  border:none; }
+.outros-posts .btn-ler:hover{color: #00a859;cursor: pointer; transition: all linear 0.8s;}
 
 /*SOBRE MIM*/
-.sobre-mim{ border-top: dotted 0.15em #fff; background:#090715;  background-image: url(../images/t.png); background-attachment: fixed;background-repeat: repeat;background-position: center;   text-transform: uppercase; text-align: center; padding: 2em 0;}
+.sobre-mim{background:#090715;  background-image: url(../images/t.png); background-attachment: fixed;background-repeat: repeat;background-position: center;   text-transform: uppercase; text-align: center; padding: 2em 0;}
 .sobre-mim img{width: 15%; border-radius: 100%; padding: 0.2em; background: #fff;}
 .sobre-mim img:hover{cursor: pointer; opacity: 0.90; background: #00a859; transition: all linear 0.5s;}
 .sobre-mim h2{font-weight: 700; color: #fff; text-shadow: 2px 3px #000;}
 .sobre-mim h3{font-size: 0.78em;  padding-bottom: 2em; color: #f2f2f2;text-shadow: 2px 3px #000;}
 .sobre-mim p{text-shadow: 2px 3px #000;text-shadow: 2px 3px #000; color:#fff;padding: 0.5em 0; padding-left: 1em; width: 100%; text-align: justify; border-left: #fff 4px solid;}
 .sobre-mim b{color: #f2f2f2; text-shadow: 2px 3px #000;}
-
-
-/*TIMELINES*/
+/*INTERAÇÃO DINAMICA COM AS REDES SOCIAIS*/
 .na_rede h2{font-weight: 700; text-align: center; padding-top: 1.5em;}
 .na_rede h3{padding-bottom: 2em; text-align: center; padding-bottom: 1.5em; font-size: 0.9em;}
 .na_rede{text-transform: uppercase;  color: #333; }
 .na_rede .box30 i{width: 100%; font-size: 3em; text-align: center; padding-bottom: 0.5em;  text-transform: uppercase;  color:#00a859; }
 .na_rede .box30 i:hover{color: #00573D; transition: all linear 1s; cursor: pointer;}
-
+/*FRASE DE MOTIVAÇÃO DO BLOG*/
 .frase{
     width: 100%;
     background-image: url(../images/sonho.jpg);       
@@ -171,9 +150,6 @@ button:focus{outline: none;}
     float: left;
     background-color: tomato;
     padding: 8em 0;
-    border-top: dotted 0.15em #fff;
-    border-bottom: dotted 0.15em #fff;
-
 }
 .frase h3{
     text-align: center;
@@ -184,13 +160,12 @@ button:focus{outline: none;}
     font-size: 3em;  
     font-weight: 800;
 }
-
-/*FOOTER*/
+/*FOOTER PRINCIPAL*/
 .main_footer{
     bottom: 0;
     background-color: #090715;
-    border-top: dotted 0.15em #fff;
 }
+/*MENU DE NAVEGAÇÃO DO FOOTER PRINCIPAL*/
 .nav_footer li{display: inline-block; padding: 0 0.4em; font-size: 0.7em; float: left;text-transform: uppercase; }
 .nav_footer li a:hover{transition: all linear 0.5s; color: #00a859;}
 .rede i{ float: right; padding:0 0.4em; color: #065a4b;}
@@ -199,13 +174,12 @@ button:focus{outline: none;}
 .legal li a{ display: inline-block; float: right; padding: 0 0.8em; text-transform: uppercase; font-size: 0.7em;}
 .legal li a:hover{transition: all linear 0.5s; color: #00a859;}
 .footer{width: 100%; float: left; padding: 1em 0; background: #090715; }
-
 /*TERMOS*/
 .termos{
     width: 100%;
 }
 .termos p { padding: 0.4em 0;}
-
+/*COPYRIGHT DO SITE*/
 .copy{
     border-top: 1px dotted #ccc;
     color: #f2f2f2;
@@ -216,10 +190,11 @@ button:focus{outline: none;}
     font-size: 0.8em;
     bottom:0;
 }
-/*ARTIGOS*/
-.artigo {background-image: linear-gradient( to bottom, #ddd, #eee, #fff, #fff);}
-
-/*Box principal*/
+/*FORMATAÇÃO PADRÃO  artigo.php*/
+.artigo {background-image: linear-gradient( to bottom, #ddd, #fff, #fff, #fff);}
+/*CORPO DE TEXTO DO ARTIGO*/
+.texto{max-width: 100%;}
+/*BLOCO DE TEXTO*/
 .artigo .box65 {
     float: left!important;
     width: 75%; 
@@ -235,26 +210,28 @@ button:focus{outline: none;}
     margin: 0.6em 0;
 }
 /*RETIRA O FOCUS DO BOTÃO SHARE*/
+.texto{width: 100%; max-width: 100%;}
 .artigo a:focus{border:none; outline: 0;}
-/*Imagem do artigo*/
+/*IMAGEM PRINCIPAL DO ARTIGO*/
 .artigo img{width: 100%; height: 420px; max-height: 420px;}
+/*IFRAME DO ARTIGO*/
 .artigo iframe{width: 100%; max-width: 100%;}
-/*LINKS*/
+/*LINKS DO ARTIGO*/
 .artigo a{ color:#3498db; font-weight: 600;}
 .artigo a:hover{border-bottom:#3498db dotted 0.1em;}
 /*MARCAR*/
 .artigo strong{font-weight: 900!important;}
+/*ENFASE DO ARTIGO*/
 .artigo blockquote{
-    border-left: 3px solid #000; 
-    padding:0.6em;
+    border-left: 0.2em solid #666;
+    padding-left: 0.4em;
 }
-/*TITULO*/
+/*FORMATAÇÃO CK EDITOR*/
+.artigo .texto pre{background: #111; color: tomato; padding: 0.6em; margin-top: 0.6; margin-top: 0.6em;}
 .artigo h1{font-weight: 900; margin-bottom: 0.4em; margin-top:0.4em;}
 .artigo .texto h1{font-weight: 500; border: none; padding-bottom: 0.2em; padding-top: 0.2em;}
 .artigo p{padding-bottom: 0.8em; padding-top: 0.8em; color: #000; text-align: justify; line-height: 20px;}
-
 /*LADO DIREITO DO ARTIGO*/
-/*BOX SECUNDARIA*/
 .sidebar, .box25{
     float: right!important;
     width: 19%;
@@ -269,7 +246,6 @@ button:focus{outline: none;}
     margin-bottom: 1em;
     position: relative;
 }
-
 .sidebar .box25, .post img{
     float: right!important;
     width: 100%;
@@ -287,4 +263,26 @@ button:focus{outline: none;}
     font-size: 1.1em;
     color: #555;
 }
+.BannerFeed img{ width: 100%; height: 100px; max-height: 100px;}
+/*DADOS DO AUTOR*/
+.autor{
+    width: 100%;
+    float: left;
 
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.autor img{
+    float: left;    
+    border-radius: 100%;
+    width:110px;   
+    height:110px;
+    background-position: center;
+    border: solid 4px #eee; 
+}
+.autor img:hover{ transition: all linear 0.8s;  border: solid 4px #999; cursor: pointer;}
+.autor .autor-dados{   
+    padding-left: 1em;
+    float: left;
+}

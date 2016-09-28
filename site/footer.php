@@ -1,12 +1,33 @@
+<section class="container bg-linha">
+    <div class="content">                           
+        <div class="clear"></div>  
+    </div>                          
+</section>
+<section class="container bg-dark-blue">
+    <div class="content">
+        <!-- CAPTURA DE E-MAIL PARA LISTA -->
+        <header class="quero-receber">                
+            <form method="post">
+                <label>
+                    <p>Junte-se a milhares leitores inteligentes e receba atualização, artigos e dicas exclusivas (é grátis)!</p>&nbsp; 
+                    <input type="email" placeholder="Seu melhor e-mail..." /> &nbsp; <button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i> Quero receber</button>
+                </label>
+            </form>
+        </header>                       
+        <div class="clear"></div>  
+    </div>                          
+</section>
 <nav class="container main_footer">
     <div class="content">
         <h1 class="fontzero">Venda mais na internet</h1>
         <ul class="nav_footer">
-            <li><a title="" href="#christian-de-ornellas">Sobre</a></li>
-            <li><a title="" href="#artigos">Artigos</a></li>
-            <li><a title="" href="#">Marketing Digital</a></li>
-            <li><a title="" href="#">Vendas</a></li>
-            <li><a title="" href="#">Tecnologia</a></li>                                      
+            <li><a title="" href="./">Início |</a></li>
+            <li><a title="" href="#christian-de-ornellas">Sobre |</a></li>
+            <li><a title="" href="#artigos">Artigos |</a></li>
+            <li><a title="" href="#" target="_blank">Facebook |</a></li>
+            <li><a title="" href="#" target="_blank">Youtube |</a></li>
+            <li><a title="" href="#" target="_blank">Instagram |</a></li>                                      
+            <li><a title="" href="#" target="_blank">Google Plus</a></li>                                      
         </ul> 
         <ul class="rede">
             <?php foreach ($Configuracao->Ultimo() as $key => $resultado): ?>
@@ -23,7 +44,7 @@
 <footer class="container footer">
     <div class="content">    
         <?php foreach ($Configuracao->Ultimo() as $key => $resultado): ?>
-            <div class="box40"><img alt="Impulsionando o seu negócio" src="../app/public/uploads/<?= $resultado->logo; ?>" width="150"></div>
+        <div class="box40"><a href="./"><img alt="Impulsionando o seu negócio" src="../app/public/uploads/<?= $resultado->logo; ?>" width="150"></a></div>
         <?php endforeach; ?>
         <div class="box40">
             <ul class="legal">
