@@ -13,7 +13,7 @@ Blog www.orientme.com.br
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="" type="image/x-icon">
         <meta name="author" content="Christian de Ornellas">
-        <meta name="generator" content="CafecodeV1.1">
+        <meta name="generator" content="CafecodeV1.3">
         <?php foreach ($Configuracao->Ultimo() as $key => $resultado): ?>
             <meta name="description" content="<?= $resultado->descricao; ?>">
             <meta name="keywords" content="<?= $resultado->keyword; ?>">
